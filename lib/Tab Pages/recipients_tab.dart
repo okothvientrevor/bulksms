@@ -28,9 +28,26 @@ class _RecipeientsPageState extends State<RecipeientsPage> {
             ], borderRadius: BorderRadius.circular(5), color: Colors.white),
             child: Column(
               children: [
-                Row(
-                  children: const [
-                    Text("Recipient List"),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                      child: Row(
+                        children: const [
+                          Text(
+                            "Recipient List",
+                            style: TextStyle(
+                                fontSize: 30, fontWeight: FontWeight.w300),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Divider(
+                        color: Colors.black,
+                      ),
+                    ),
                   ],
                 ),
                 Row(),

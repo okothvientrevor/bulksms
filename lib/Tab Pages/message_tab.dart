@@ -32,6 +32,45 @@ class MessageTab extends StatelessWidget {
                   blurRadius: 3,
                   offset: const Offset(2, 3))
             ], borderRadius: BorderRadius.circular(5), color: Colors.white),
+            child: Column(
+              children: [
+                Row(
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        "Recipient List",
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.w300),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {},
+                        child: const Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 15),
+                            child: Text(
+                              "Load..",
+                              style: TextStyle(fontSize: 20),
+                            ))),
+                    ElevatedButton(
+                        onPressed: () {},
+                        child: const Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 15),
+                            child: Text(
+                              "Save..",
+                              style: TextStyle(fontSize: 20),
+                            ))),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ],

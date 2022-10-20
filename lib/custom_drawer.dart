@@ -1,3 +1,5 @@
+import 'package:bulk_sms/Drawer%20pages/job_manager.dart';
+import 'package:bulk_sms/homepage.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -22,10 +24,16 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
             ),
           ),
-          const ListTile(
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-            leading: Icon(Icons.edit),
-            title: Text("Create a Job"),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const HomePage()));
+            },
+            child: const ListTile(
+              visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+              leading: Icon(Icons.edit),
+              title: Text("Create a Job"),
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
@@ -33,10 +41,16 @@ class CustomDrawer extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          const ListTile(
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-            leading: Icon(Icons.timer),
-            title: Text("Job Manager"),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const JobManager()));
+            },
+            child: const ListTile(
+              visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+              leading: Icon(Icons.timer),
+              title: Text("Job Manager"),
+            ),
           ),
           const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
