@@ -2,6 +2,8 @@ import 'package:bulk_sms/Drawer%20pages/job_manager.dart';
 import 'package:bulk_sms/homepage.dart';
 import 'package:flutter/material.dart';
 
+import 'Drawer pages/settings.dart';
+
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
     Key? key,
@@ -64,10 +66,16 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
             ),
           ),
-          const ListTile(
-            visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-            leading: Icon(Icons.settings),
-            title: Text("Settings"),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const SettingsPage()));
+            },
+            child: const ListTile(
+              visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+              leading: Icon(Icons.settings),
+              title: Text("Settings"),
+            ),
           ),
           const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),

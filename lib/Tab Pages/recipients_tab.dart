@@ -167,9 +167,9 @@ class _RecipeientsPageState extends State<RecipeientsPage> {
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
                     child: Row(
                       children: [
-                        Image.asset("assets/images/greentick.png", height: 30),
+                        Image.asset("assets/images/redX.png", height: 30),
                         const SizedBox(width: 10),
-                        const Text("10,000 complete contacts fond in file")
+                        const Text("Incomplete messages")
                       ],
                     ),
                   )
