@@ -5,6 +5,19 @@ class SendTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Row(
+          children: [
+            Image.asset(
+              "assets/images/bulksms.png",
+              height: 30,
+            )
+          ],
+        ),
+      ),
+      body: const Center(),
+    );
   }
 }
